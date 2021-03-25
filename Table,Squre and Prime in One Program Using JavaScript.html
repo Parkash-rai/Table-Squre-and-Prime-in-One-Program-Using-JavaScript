@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<style>
+#main{
+	 background-color: violet;
+	 margin-top:60px;
+	 height: 445px;
+	 width: 450px;
+	 border-radius:30px;
+	 margin-left: 150px;}
+input[type=text]{	
+	border-radius: 10px;
+	padding: 10px;
+	width: 65%;
+    font-size:17px;
+	border:none;
+	margin:25px;
+	height:10px;
+	margin-left:80px;}
+input[type=submit]{
+    background:orange;
+    color:#fff;
+    font-weight:bold;
+    height:40px;
+    margin-left:10px;
+    width: 120px;
+    border-radius: 40px;
+
+}
+
+		
+		
+</style>
+<script>
+function table(){
+var a,i;
+a=Number(document.getElementById("first").value);
+document.write('<u><h1> Table  Generated</h1></u>');
+document.write('</br>')
+for(i=1;i<=10;i++){
+    
+	document.write(i +"* "+a +"="+ i*a);
+	document.write('</br>')
+
+} 
+
+}
+function square(){
+var a,c;
+a=Number(document.getElementById("first").value);
+c= (a*a);
+document.getElementById("answer").value= c;
+}
+function prime() {
+var a,i,count=0,c;
+a=Number(document.getElementById("first").value);
+for(i=1;i<=a;i++){
+if(a%i==0){ count++;}
+  }
+if(count==2){
+	c=("It is a  Prime Number.");
+	document.getElementById("answer").value= c;
+}
+else
+	c=("It is not Prime Number.");
+	document.getElementById("answer").value= c;
+}
+</script>
+</head>
+<body>
+<div id="main">
+	<h1 style="padding-top: 55px; text-decoration: underline; margin-left: 100px;"> Multiple Programs </h1>
+<label Style="font-weight:bold;  margin-left:150px; font-size:22px;color:White;">
+Enter the  Number </label>
+<input type="text" id="first" placeholder="Enter the Number"><br>
+<div class="button">
+<center><input class="btn"type="submit" value="Table"onclick="table()">
+<input class="btn"type="submit" value="Square"onclick="square()">
+<input class="btn"type="submit" value="Prime"onclick="prime()"></center>
+
+</div>
+<h1> The Result is:</h1>
+<input type="text" id="answer">
+
+</div>
+</body>
+</html>
